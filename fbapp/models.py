@@ -11,7 +11,7 @@ db = SQLAlchemy(app)
 class Gender(enum.Enum):
     MALE = 0
     FEMALE = 1
-    OTHER = 3
+    OTHER = 2
 
 
 class Content(db.Model):
@@ -22,6 +22,7 @@ class Content(db.Model):
     def __init__(self, description, gender):
         self.description = description
         self.gender = gender
+        
 
 
 def init_db():
